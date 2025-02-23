@@ -1,0 +1,197 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 01 del 19/02/2025 di Maurizio Boscaini</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="lab01_appunti"
+                  title="Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 01 del 19/02/2025 di Maurizio Boscaini"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Note" duration="0">
+        <p>Appunti di laboratorio Contatto <a href="mailto:maurizio.boscaini@unitn.it" target="_blank">maurizio.boscaini@unitn.it</a></p>
+<p>NOTA: questi appunti sono da intendersi solo come aiuto allo studio e alla preparazione all&#39;esame.</p>
+<pre><code>La programmazione è difficile.
+Si può imparare a programmare solo programmando.
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Linguaggio Markdown" duration="0">
+        <p>Il linguaggio Markdown è un linguaggio di marcatura di testi che consente di etichettare un testo al fine di dargli un senso, un valore, una significo (una semantica), una struttura. Consente quindi di aggiungere metadati dai dati. I metadati arricchiscono il contenuto informativo senza sostanzialmente modificarlo.</p>
+<p>Il linguaggio Markdown di avvale di una serie di simboli per marcare (o taggare) il testo.</p>
+<p>Un documento Markdown viene salvato solitamente in un file di testo con estensione <strong>.md</strong>.</p>
+<p>Dopo aver creato un nuovo documento, è necessario salvarlo su file con l&#39;estensione opportuna.</p>
+<p class="image-container"><img alt="Università di Trento" src="img/28e3bf89a027093b.png"></p>
+<ul>
+<li>Per andare a capo, inserisco due spazi alla fine della riga</li>
+<li>Per i paragrafi, inserisco due a capo</li>
+<li>Per i titoli, utilizzo uno o più # (titolo di livello 1, ecc.)</li>
+<li>Per evidenziare un testo posso delimitarlo: <ul>
+<li>con *</li>
+<li>con **</li>
+<li>con _** e _**</li>
+</ul>
+</li>
+<li>Per evidenziare un blocco di testo utilizzo &gt;</li>
+<li>Il backslash, ovvero la barra rovescia, è il caratteri di escape in molti linguaggio e specifica che il carattere/i caratteri successivi devono essere interpretati nel loro significato lettere (es. l&#39;hashtag viene interpratato come carattere e non come simbolo per denotare un titolo di livello uno)</li>
+<li>Per inserire un link (o, meglio, hyperlink) utilizo il formato <strong>[descrizione](URL)</strong>. L&#39;URL è l&#39;indirizzo Internet della risorsa (es. pagina web). Per trasformare un URL (indirizzo Internet) in un link si può anche delimitarlo con parentesi angolari. Per es. <strong>&lt;http://www.esempio.it&gt;</strong></li>
+<li>Per inserire un&#39;immagine utilizzo il formato <strong>![descrizione](URL)</strong></li>
+<li>Il backtick singolo ` per un pezzo di codice. Tre backtick ``` delimitano l&#39;inizio e la fine di un blocco di codice.</li>
+</ul>
+<p>Documento</p>
+<p>I <strong><em>linguaggi in informatica</em></strong> possono essere classificati in:</p>
+<ul>
+<li>linguaggi di programmazione</li>
+<li>linguaggi di <em>rappresentazione dei dati</em> (o delle informazioni)</li>
+</ul>
+<p>Un <strong>ipertesto</strong> è un testo arricchito da link ed eventualmente contenuti multimediali (immagini, video ecc.).</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Visual Studio Code" duration="0">
+        <p>Installare:</p>
+<ul>
+<li><em>Visual Studio Code </em><a href="https://code.visualstudio.com/download" target="_blank">Download</a></li>
+<li>estensioni di VS Code <ul>
+<li><em>Auto-Open Markdown Preview</em></li>
+<li>(facoltativa) <em>Markdown All in One</em></li>
+<li>(facoltativa) <em>Markdown PDF</em></li>
+</ul>
+</li>
+</ul>
+<p>CTRL + SHIFT + P consente di eseguire dei comandi in VS Code, come per esempio la conversione del documento Markdown in PDF</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Definizioni" duration="0">
+        <h2 is-upgraded>Informatica</h2>
+<ul>
+<li>Etimologia: <em>information automatique</em> -&gt; <em>informatique</em></li>
+<li>Computer Science (nel mondo anglosassione)</li>
+</ul>
+<h2 is-upgraded>Dato e informazione</h2>
+<p>Un dato <em>grezzo</em> diventa informazione allor quando viene interpretato (assumendo un valore, un significato, quindi il dato grezzo viene elaborato, trasformato). L&#39;interprete grazie all&#39;informazione arrichisce la propria conoscenza e può agire in modo più o meno saggio. Piramide DIKW (Data, Information, Knowledge, Wisdom)</p>
+<p>Dato - Informazione - Conoscenza - Saggezza</p>
+<p>Es. 347256124</p>
+<h2 is-upgraded>Trasmissione comunicazione</h2>
+<p>Nella trasmissione si tramettono dati, nella comunicazione si condividono informazioni tramite lo scambio di messaggi.</p>
+<h2 is-upgraded>Sistema</h2>
+<p>Un sistema secondo la Teoria unificato, o generale, dei sistemi, che studia i sistemi a prescindere dalla loro natura, è:</p>
+<ul>
+<li>un insieme di elementi che formano un tutt&#39;uno organico</li>
+<li>gli elementi iteragiscono tra loro</li>
+<li>il sistema interagisce con l&#39;esterno (input/output)</li>
+<li>il sistema ha uno scopo (che può essere quello di studio)</li>
+</ul>
+<p>Lo scambio interno ed esterno è una combinazione di:</p>
+<ol type="1">
+<li>energia</li>
+<li>materia</li>
+<li>informazione</li>
+</ol>
+<h2 is-upgraded>Sistema di elaborazione o computer</h2>
+<p>Schema a strati funzionali di un computer</p>
+<ul>
+<li>(SW) Software Applicativo</li>
+<li>(SW) Software di base (Operating System)</li>
+<li>(FW) Firmware (software generalmente <em>cablato</em>, Basic Input Output System, BIOS, ora UEFI)</li>
+<li>(HW) Hardware (componenti fisici, v)</li>
+</ul>
+<h2 is-upgraded>Inferfaccia utente</h2>
+<p>Il sistema operativo mette a disposizione due tipologie di interfaccia per l&#39;utente:</p>
+<ol type="1">
+<li>CLI (Command Line Interface), o interfaccia a carattere, o testuale</li>
+<li>GUI (Graphical User Interface), che utilizza un dispositivo di puntamento (mouse, touch ecc.) e crea un ambiente grafico utilizzando la metafora del della scrivania di un ufficio (desktop)</li>
+</ol>
+<p>Architettura o modello di von Neumann per rappresentare la struttura di un elaboratore. <img alt="Modello di von Neumann" src="img/c016364ad9643c9.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Problema - Algoritmo - Programma" duration="0">
+        <h2 is-upgraded>Problema</h2>
+<ul>
+<li>Situazione che richiede una soluzione</li>
+<li>Quesito che richiede una risposta</li>
+</ul>
+<h2 is-upgraded>Algoritmo</h2>
+<ul>
+<li>Procedimento per risolvere un problema.</li>
+<li>Una sequenza finita di passi elementari per la risoluzione di una classe di problemi.<ul>
+<li>finitezza</li>
+<li>elementarità e non ambiguità</li>
+<li>generalitàes.3 + 2 ?a + b ?</li>
+</ul>
+</li>
+</ul>
+<p>Sequenza = serie di elementi anche ripetuti in cui conta l&#39;ordine</p>
+<p>Quindi, una sequenza è diversa da un insieme (elementi ripetuti e ordine)</p>
+<h2 is-upgraded>Programma</h2>
+<ul>
+<li>Un programma è l&#39;implementazione (o la codifca) in un linguaggio di programmazione di un algoritmo. <ul>
+<li>Richiede un linguaggio di programmazione</li>
+</ul>
+</li>
+</ul>
+<p>Livelli di linguaggio</p>
+<ul>
+<li>Linguaggio naturale (essere umano) <ul>
+<li>È ambiguo (es. &#34;sale in cucina&#34;)</li>
+</ul>
+</li>
+<li>Descrizione intermedia dell&#39;algoritmo <ul>
+<li>Modalità per rappresentare gli algoritmi <ol type="1">
+<li>Pseudocodice, pseudocodifica, pseudolinguaggio, linguaggio di progetto.</li>
+<li>Flowchart o diagrammi di flusso.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Linguaggio di programmazione</li>
+<li>Linguaggio macchina (automa)</li>
+</ul>
+<h2 is-upgraded>Linguaggio</h2>
+<p>Un linguaggio si compone di:</p>
+<ol type="1">
+<li>alfabeto = insieme di simboli</li>
+<li>vocabolario = insieme di parole (sequenze di simboli) valide</li>
+<li>sintassi = insieme di regole per la costruzione di frasi</li>
+<li>semantica = senso/valore/significato delle parole e delle frasi</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
