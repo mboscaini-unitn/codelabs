@@ -1,0 +1,173 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 03 del 26/02/2025 di Maurizio Boscaini</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="lab03_appunti"
+                  title="Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 03 del 26/02/2025 di Maurizio Boscaini"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Note" duration="0">
+        <p>Appunti di laboratorio - <a href="https://mboscaini-unitn.github.io/codelabs/index.html" target="_blank">elenco completo</a> Contatto &lt;maurizio.boscaini@unitn.it&gt;</p>
+<p>&gt; NOTA: questi appunti sono da intendersi solo come aiuto allo studio e alla preparazione all&#39;esame.</p>
+<pre><code>La programmazione è difficile...ma è anche bella, utile e importante.
+Si può imparare a programmare solo programmando.
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Dati e programmi" duration="0">
+        <h2 is-upgraded>Codifica</h2>
+<p>La codifica può avere due accezioni:</p>
+<ol type="1">
+<li>codifica del dato</li>
+<li>codifica dell&#39;istruzione</li>
+</ol>
+<p>UN <strong>codice</strong> associa a un <em>dato</em> un <em>simbolo</em>.</p>
+<p><strong><em>Algoritmi + strutture dati = programmi</em></strong> Libro di Niklaus Wirth</p>
+<p>Problema: uno stesso simbolo (per esempio un carattere) può avere più significati per l&#39;interprete. Per esempio il carattere &#34;&lt;&#34; può rappresentare:</p>
+<ul>
+<li>il delimitatore iniziale di un tag</li>
+<li>il simbole con il significo matematico &#34;minore di&#34;</li>
+</ul>
+<p>Per distinguere queste due situazioni, quindi &#34;disanbiguare&#34; il termine posso utilizzare, a seconda dell&#39;ambito, una delle seguenti modalità:</p>
+<ul>
+<li>una <strong>sequenza di escape</strong>, per es. &#34;&lt;&#34;, in cui il carattere &#34;&#34; indica che il carattere/i successivo debba essere interpretato nel suo significato letterale (ovvero il simbolo di minore di) e non con un significato speciale (la barra rovescia si rappresenta con il suo raddoppio, cioè &#34;\&#34;)</li>
+<li>una <strong>codifica specifica</strong>, per esempio nell&#39;XML si utilizza XML encoding (così come l&#39;HTML encoding) che rappresenta il simbolo &#34;&lt;&#34; con &#34;&lt;&#34; dove: <ul>
+<li>&amp; è il prefisso, o delimitatore iniziale</li>
+<li>lt = less than è la rappresentazione del simbolo</li>
+<li>; è il delimitatore finale</li>
+</ul>
+</li>
+</ul>
+<p>Esempi di uso di XML nei file .docx, .odt ecc. che non sono altro che file ZIP che raccolgono contenuti e metadati (in più formati XML) sulla struttura e il formato del documento</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 3.1" duration="0">
+        <h2 is-upgraded>La nebbia agli irti colli in XML</h2>
+<p>e con regole di stile definite in un file CSS esterno</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Il linguaggio HTML" duration="0">
+        <p>Documentazione del corso a.a. 2023/2024 del prof. Paolo Zancanaro <a href="https://maxzancanaro.github.io/codelabs/html_e_css" target="_blank">Introduzione ad HTML e CSS</a></p>
+<p><strong>Internet</strong> è un&#39;infrastruttura di rete di calcolatori (rete di reti) estesa al mondo intero che utilizza la suite di protocolli TCP/IP.</p>
+<h2 is-upgraded>Schema di un sistema di trasmissione/comunicazione</h2>
+<p>In un <strong>sistema di comunicazione</strong> una sorgente (o mittente) invia un messaggio a una destinazione (o destinatario) attraverso un sistema di trasmissione.</p>
+<p>Un <strong>messaggio</strong> indica un informazione inviata, o scambiata, tra mittente e destinatario.</p>
+<p>In un <strong>sistema di trasmissione</strong> troviamo i seguenti elementi:</p>
+<ul>
+<li>trasmettitore, che codifica il messaggio e lo converte in segnali che invia nel mezzo di transmissione</li>
+<li>mezzo, o canale, di trasmissione, che è la linea fisica attraverso cui passa il segnale</li>
+<li>ricevitore, che decodifica il segnale ricevuto e passa il messaggio ottenuto al destinatorio</li>
+</ul>
+<p>Un <strong>segnale</strong> è una variazione nel tempo di una grandezza fisica.</p>
+<p>Il <strong>rumore</strong>, o disturbo, è il segnale indesiderato, che si sovrappone al segnale trasmesso (utile) e può far sì che il messaggio ricevuto sia diverso da quello trasmesso.</p>
+<p>Nella trasmissione dati si utilizzano due tipologie di codici, che aggiungono ai dati dei metadati per far fronte a eventuali errori di trasmissione (dovuti al rumore):</p>
+<ul>
+<li>codici a rilevazione di errore (EDC Error Detecting Code)</li>
+<li>codici a correzione di errore (ECC Error Correction Code)</li>
+</ul>
+<p>Posso classificare la trasmissione come:</p>
+<ul>
+<li>unidirezionale</li>
+<li>bidirezionale</li>
+</ul>
+<p>Tramite la rete Internet si possono fornire servizi, quali:</p>
+<ul>
+<li>e-mail</li>
+<li>FTP (File Trasfer Protocol)</li>
+<li>World Wide Web (WWW, Web)</li>
+</ul>
+<p>Il <strong>Web</strong> è un servizio client-server della rete Internet per la pubblicazione/condivisione di contenuti ipertestuali/multimediali basato su:</p>
+<ol type="1">
+<li><strong>HTTP</strong> (HyperText Trafer Protocol): un protocollo di trasmissione</li>
+<li><strong>URL</strong> (Uniform Resource Locator): un sistema di indirizzamento delle risorse/servizi/contenuti, quindi per esempio un file di un&#39;immagine avrà il proprio URL univoco (per esempio un&#39;immagine del logo dell&#39;Unitn ha il seguente URL https://idp.unitn.it/idp/images/MyDU_logo_UNITRENTO_IT.png)</li>
+<li><strong>HTML</strong> (HyperText Markup Language): un linguaggio di marcatura di ipertesti derivato dall&#39;SGML.</li>
+</ol>
+<p>Un servizio/architettura <strong>client-server</strong> prevede due soggetti/attori:</p>
+<ul>
+<li>il client che effettua le richieste di servizi/contenuti</li>
+<li>il server che risponde a tali richieste e, per poterlo fare, deve essere sempre in stato di ascolto</li>
+</ul>
+<p>Un programma client-server di differenzia da un programma desktop perchè, mentre un programma desktop è monolitico (ovvero il codice eseguibile deve risiedere su un&#39;unica macchina), un programma client-server è costituito da due parti che, in generale, risiedono su macchine diverse (il server e il client), costituendo quindi un sistema distribuito. hellociao</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Il linguaggio HTML" duration="0">
+        <p><a href="https://www.w3schools.com/html/" target="_blank">HTML Tutorial di w3schools</a></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 3.2" duration="0">
+        <h2 is-upgraded>Pagina HTML base</h2>
+<pre><code language="language-html" class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+    &lt;head&gt;
+        &lt;title&gt;Unitn - Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;This is a Heading&lt;/h1&gt;
+        &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Classificazione dei tag dell&#39;HTML 5" duration="0">
+        <p>I tag in HTML5 si possono classificare in vari modi:</p>
+<ul>
+<li><strong>Tag semantici</strong>: indicano il significato del contenuto, ad esempio:<ul>
+<li>Tag di intestazione: <strong>&lt;h1&gt;</strong>, <strong>&lt;h2&gt;</strong>, ..., <strong>&lt;h6&gt;</strong></li>
+<li>Tag strutturali: <strong>&lt;header&gt;</strong>, <strong>&lt;nav&gt;</strong>, <strong>&lt;article&gt;</strong>, <strong>&lt;section&gt;</strong>, <strong>&lt;footer&gt;</strong></li>
+</ul>
+</li>
+<li><strong>Tag di formattazione</strong>: determinano l&#39;aspetto visivo del contenuto, ad esempio:<ul>
+<li><strong>&lt;b&gt;</strong>: visualizza il testo in grassetto (ma per indicare enfasi si consiglia <strong>&lt;strong&gt;</strong>)</li>
+<li><strong>&lt;i&gt;</strong>: visualizza il testo in corsivo (in alternativa, per enfatizzare in modo semantico si può usare <strong>&lt;em&gt;</strong>)</li>
+</ul>
+</li>
+<li><strong>Tag non semantici</strong>: come <strong>&lt;div&gt;</strong> e <strong>&lt;span&gt;</strong>, che non indicano significato specifico, ma sono utili per raggruppare o stilizzare elementi.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
