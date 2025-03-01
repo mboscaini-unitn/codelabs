@@ -1,0 +1,127 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 04 del 27/02/2025 di Maurizio Boscaini</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="lab04_appunti"
+                  title="Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 04 del 27/02/2025 di Maurizio Boscaini"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Note" duration="0">
+        <p>Appunti di laboratorio - <a href="https://mboscaini-unitn.github.io/codelabs/index.html" target="_blank">elenco completo</a> Contatto <a href="mailto:maurizio.boscaini@unitn.it" target="_blank">maurizio.boscaini@unitn.it</a></p>
+<p>NOTA: questi appunti sono da intendersi solo come aiuto allo studio e alla preparazione all&#39;esame.</p>
+<pre><code>La programmazione è difficile...ma è anche bella, utile e importante.
+
+Si può imparare a programmare solo programmando.
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 4.1" duration="0">
+        <p>Il browser ignora i tag non riconosciuti (nell&#39;esercizio il tag &lt;invenzione&gt;), quindi che non sono tag HTML validi.</p>
+<pre><code language="language-html" class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+    &lt;head&gt;
+        &lt;title&gt;Unitn - Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;This is a Heading&lt;/h1&gt;
+        &lt;hr&gt;
+        &lt;p title=&#34;I&#39;m a tooltip&#34;&gt;This is a paragraph.&lt;/p&gt;
+        &lt;invenzione lang=&#34;it&#34;&gt;Testo inventato&lt;/invenzione&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>il tag &lt;br&gt; (break rule) inserisce (marca) un&#39;interruzione nel contenuto, che normalmente viene &#34;resa&#34; con un &#34;a capo&#34;.</li>
+<li>il tag &lt;hr&gt; oppure &lt;hr /&gt; (hard rule) inserisce (marca) un&#39;interruzione nel contenuto, che normalmente viene &#34;resa&#34; con una riga, o linea orizzontale.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Testo, ipertesto, ipermedia" duration="0">
+        <p>Tre livelli di un documento:</p>
+<ul>
+<li><strong>testo</strong> = <strong>puro testo</strong> (<em>plain text</em>)</li>
+<li><strong>ipertesto</strong> = <strong>testo + collegamenti</strong> (<em>link</em>), ottenuti grazie al tag &lt;a&gt;</li>
+<li><strong>ipermedia</strong> = <strong>testo + collegamenti + contenuti multimediali</strong> ottenuti tramite appositi tag, per esempio per inglobare (<em>embed</em>) un&#39;immagine utilizzo il tag &lt;img&gt;</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Principio della 
+separation of concerns" duration="0">
+        <p>È simile al principio base del <strong>problem solving</strong> della scomposizione di un problema in sottoproblemi più semplici da risolvere.</p>
+<p>Si tratta di un&#39;applicazione del motto <em>divide et impera</em>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Cenni sui font" duration="0">
+        <p>I font si distinguono in:</p>
+<ul>
+<li><strong>font sans-serif</strong> (senza grazie), detti anche &#34;a bastoni&#34;</li>
+<li><strong>font serif</strong></li>
+</ul>
+<p>Tra i sistemi di misura per la grandezza dei font, troviamo:</p>
+<ul>
+<li>px = pixel (valori assoluti)</li>
+<li>%  (valori relativi)</li>
+<li>em  (valori relativi alla dimensione base del carattere definita nel browser oppure nel documento)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 4.2" duration="0">
+        <p>Crea una pagina web (<strong>1984a/index.html</strong>) con l&#39;incipit del libro 1984 di George Orwell. Marca opportunamente alcune parti del contenuto, applicando i seguenti tag all&#39;interno del tag &lt;body&gt;:</p>
+<ul>
+<li>&lt;h1&gt;, &lt;h2&gt; (, &lt;h3&gt;)</li>
+<li>&lt;p&gt;</li>
+<li>&lt;br&gt;</li>
+<li>&lt;hr&gt;</li>
+<li>i tag di formattazione: &lt;b&gt;, &lt;i&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;mark&gt;, &lt;ins&gt;, &lt;del&gt;, &lt;sup&gt;, &lt;sub&gt;, &lt;small&gt;</li>
+</ul>
+<p>Inoltre:</p>
+<ul>
+<li>indicare la fonte con il tag &lt;a&gt;</li>
+<li>includere con il tag &lt;img&gt; un&#39;immagine di una locandina di un film tratto dal libro oppure una copertina di un&#39;edizione del libro</li>
+</ul>
+<p>Nella sezione <em>Codice</em> della lezione l&#39;esercizio svolto da Elisabetta Rovere che fornisce il seguente output: <img alt="1984 pagina HTML" src="img/98655c94e6757aa1.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
