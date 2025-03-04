@@ -1,0 +1,137 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 05 del 04/03/2025 di Maurizio Boscaini</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="lab05_appunti"
+                  title="Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 05 del 04/03/2025 di Maurizio Boscaini"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Note" duration="0">
+        <p>Appunti di laboratorio - <a href="images/https://mboscaini-unitn.github.io/codelabs/index.html" target="_blank">elenco completo</a> Contatto <a href="mailto:maurizio.boscaini@unitn.it" target="_blank">maurizio.boscaini@unitn.it</a></p>
+<p>NOTA: questi appunti sono da intendersi solo come aiuto allo studio e alla preparazione all&#39;esame.</p>
+<pre><code>La programmazione è difficile...ma è anche bella, utile e importante.
+
+Si può imparare a programmare solo programmando.
+</code></pre>
+<p>Riferimento</p>
+<ul>
+<li><a href="https://www.w3schools.com/html" target="_blank">HTML Tutorial (w3school.com)</a></li>
+</ul>
+<p>Argomenti svolti nella Lezione</p>
+<ul>
+<li>HTML Styles</li>
+<li>HTML Formatting</li>
+<li>HTML Quotations</li>
+<li>HTML Comments</li>
+<li>HTML Colors</li>
+</ul>
+<h2 is-upgraded>L&#39;attributo HTML <code>style</code></h2>
+<ul>
+<li>L&#39;aggettivo <em>cascading</em> indica che le regole definite per un elemento si applicano &#34;a cascata&#34; anche agli elementi contenuti (o figli)</li>
+<li>Principio di <em>località</em> per le regole di stile: le regole più vicine e più specifiche (ovvero le ultime) prevalgono su quelle più generali.</li>
+</ul>
+<p>Il tag &lt;body&gt; (e soltanto lui) prevede l&#39;attributo <code>bgcolor</code> come alternativa alla definizione del colore di sfondo tramite l&#39;attributo <code>style</code> e la proprietà <code>background-color</code>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Rappresentazione dei numeri" duration="0">
+        <p>I numeri rappresentano delle quantità.</p>
+<p>I sistemi di rappresentazione dei numeri si dividono in:</p>
+<ul>
+<li>non posizionali</li>
+<li>posizionali</li>
+</ul>
+<p>Nei sistemi <strong>non posizionali</strong> il valore di un simbolo è sempre lo stesso, ovvero non dipende dalla posizione che ha nella rappresentazione. Es. in romano il simbolo <code>V</code> vale sempre <code>cinque</code> sia nel numero <code>VI</code> sia nel numero <code>IV</code>.</p>
+<p>Nei sistemi <strong>posizionali</strong> il valore di un simbolo all&#39;interno della rappresentazione del numero dipende:</p>
+<ul>
+<li>dal valore del simbolo stesso</li>
+<li>dalla sua posizione Per es. nel sistema posizionale decimale il simbolo <code>3</code> ha valore <code>tre</code> nel numero <code>13</code>, mentre ha valore <code>trenta</code> nel numero <code>37</code>.</li>
+</ul>
+<h2 is-upgraded>Conversione tra basi diverse</h2>
+<ul>
+<li>Per esempio, per passare da decimale a binario, divido il numero per 2 fino a che non arrivo a zero e leggo i resti dall&#39;ultimo al primo.</li>
+<li>Per esempio, per passare da binario a decimale, sommo le cifre del numero moltiplicate per il proprio peso.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 5.1" duration="0">
+        <h2 is-upgraded>HTML5: Wind of changeElementi HTML da applicare (oltre a quelli già visti in esercizi precedenti):</h2>
+<p>commenti <code><!-- --></code>, <code>html</code>, <code>head</code>, <code>title</code>, <code>meta</code>, <code>body</code>, <code>p</code>, <code>h1</code>, <code>h2</code>, <code>br</code>, <code>strong</code>, <code>em</code></p>
+<p>Crea la pagina HTML <code>wind_of_change.html</code> come quella riportata sotto col testo di Wind of change degli Scorpions.</p>
+<p>Pagina base:</p>
+<pre><code language="language-html" class="language-html">&lt;!DOCTYPE html&gt;
+&lt;!--
+@author: maurizio.boscaini@gmail.com
+@version: 1.0 2018-02-18
+--&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;&lt;/title&gt;
+        &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p class="image-container"><img alt="Wind of change" src="img/6db8ff9a7f7b0fa8.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 5.2" duration="0">
+        <h2 is-upgraded>HTML5: Dennis MacAlister Ritchie</h2>
+<p>Elementi HTML da applicare (oltre a quelli già visti in esercizi precedenti):</p>
+<p><code>a</code>, <code>img</code></p>
+<p>Crea la pagina HTML `dmr.html&#39; come quella riportata sotto su Dennis MacAlister Ritchie.</p>
+<p>I link si riferiscono a pagine di Wikipedia.</p>
+<p class="image-container"><img alt="Dennis MacAlister Ritchie" src="img/3c4129d2a27fed49.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 5.3" duration="0">
+        <h2 is-upgraded>HTML5: Associazione antigraffiti</h2>
+<p>Elementi HTML da applicare (oltre a quelli già visti in esercizi precedenti):</p>
+<p><code>small</code>, <code>b</code>, <code>i</code>, <code>sup</code>, <code>sub</code>, <code>hr</code></p>
+<p>Crea la pagina HTML `associazioneantigraffiti.html&#39; come quella riportata sotto sull&#39;Associazione antigraffiti.</p>
+<p>Cliccando sulle immagini si aprono le immagini nella dimensione originale, mentre l&#39;ultimo link utilizza l&#39;attributo: <code>target="_blank"</code></p>
+<p>Le immagini vanno salvate nella sottodirectory: <code>images/associazioneantigraffiti/</code></p>
+<p class="image-container"><img src="img/d18979c93d2e7b2e.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
