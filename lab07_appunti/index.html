@@ -1,0 +1,203 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 07 del 20/03/2025 di Maurizio Boscaini</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="lab07_appunti"
+                  title="Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 07 del 20/03/2025 di Maurizio Boscaini"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Note" duration="0">
+        <p>Appunti di laboratorio - <a href="https://mboscaini-unitn.github.io/codelabs" target="_blank">elenco completo</a> Contatto <a href="mailto:maurizio.boscaini@unitn.it" target="_blank">maurizio.boscaini@unitn.it</a></p>
+<p>NOTA: questi appunti sono da intendersi solo come aiuto allo studio e alla preparazione all&#39;esame.</p>
+<pre><code>La programmazione è difficile...ma è anche bella, utile e importante.
+
+Si può imparare a programmare solo programmando.
+</code></pre>
+<p>Riferimento</p>
+<ul>
+<li><a href="https://www.w3schools.com/html" target="_blank">HTML Tutorial (w3school.com)</a></li>
+<li><a href="https://www.w3schools.com/css/" target="_blank">CSS Tutorial (w3school.com)</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Salvataggio di una pagina HTML" duration="0">
+        <p>Il browser consente di salvare il contenuto di una pagina secondo tre modalità:</p>
+<ul>
+<li>HTML only</li>
+<li>single page, che include immagini ecc.</li>
+<li>webpage complete, che crea un directory con i contenuti esterni (immagini, css, ...) linkati nella pagina</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Elementi HTML di tipo &#34;block&#34; e &#34;inline&#34;" duration="0">
+        <h2 is-upgraded>I tag &lt;div&gt; e &lt;span&gt;</h2>
+<p>I tag &lt;div&gt; e &lt;span&gt; sono <em>contenitori generici</em> di testo e/o altri elementi. Il primo è di tipo <strong>blocco</strong>, mentre il secondo è di tipo <strong>inline</strong>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Percorsi assoluti e relativi" duration="0">
+        <p>I <strong>percorsi</strong> dei file e, più in generale, delle risorse vengono utilizzati quando si collegano file esterni, come:</p>
+<ul>
+<li>pagine web</li>
+<li>immagini e altri contenuti multimediali</li>
+<li>fogli di stile</li>
+<li>file con codice JavaScript</li>
+</ul>
+<p>Un percorso assoluto parte con il protocollo (es. https) oppure dalla radice del server web ed inizia con &#34;/&#34; (es. /immagini/...)</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Il tag &lt;head&gt;" duration="0">
+        <p>È un contenitore di metadati.</p>
+<p>I <strong>dati</strong> si possono distinguere in:</p>
+<ol type="1">
+<li><strong>dati veri</strong> e proprio che costituiscono il contenuto del documento</li>
+<li><strong>metadati</strong>, ovvero dati sui dati che descrivono o aggiungono informazioni &#34;collaterali&#34; al contenuto (per esempio, l&#39;autore di un documento, il tipo di codifica dei caratteri utilizzato ecc.)</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Box model" duration="0">
+        <p>Il <strong>box model</strong> definisce per i rettangolo associato nella pagina a ciascun elemnento HTML le seguenti parti:</p>
+<ul>
+<li>margin, distanza dagli elementi vicini</li>
+<li>border, dimensione del bordo</li>
+<li>padding, distanza del contenuto dal bordo</li>
+<li>contenuto (testo, immagine ecc.)</li>
+</ul>
+<p class="image-container"><img alt="box-model" src="img/e52545901f3530de.png"></p>
+<p>Inoltre, per le dimensioni (<code>width</code> e <code>height</code>) del rettangolo si hanno i seguenti possibili valori per la proprietà <code>box-sizing</code>:</p>
+<p class="image-container"><img alt="box-model2" src="img/a815aba2bc788e23.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Layout" duration="0">
+        <p>Quasi sempre i siti web visualizzano i contenuti su più colonne (come riviste o quotidiani cartecei).</p>
+<p>Il <strong>layout</strong> descrive la disposizione dei contenuti nella pagina, ovvero la struttura di presentazione dei contenuti.</p>
+<p>HTML5 ha diversi <strong>elementi semantici</strong> che definiscono le diverse parti di una pagina web:</p>
+<ul>
+<li>&lt;header&gt; - Definisce un&#39;intestazione per un documento o una sezione &lt;nav&gt; - Definisce un set di link di navigazione</li>
+<li>&lt;section&gt; - Definisce una sezione in un documento &lt;article&gt; - Definisce un contenuto indipendente e autonomo</li>
+<li>&lt;aside&gt; - Definisce un contenuto a parte dal contenuto (come una barra laterale)</li>
+<li>&lt;footer&gt; - Definisce un piè di pagina per un documento o una sezione</li>
+<li>&lt;details&gt; - Definisce dettagli aggiuntivi che l&#39;utente può aprire e chiudere su richiesta</li>
+<li>&lt;summary&gt; - Definisce un&#39;intestazione per l&#39;elemento &lt;details&gt;</li>
+</ul>
+<p>Per creare un layout multicolonna si possono usare alcune tecniche:</p>
+<ul>
+<li>un framework CSS, per es. è molto utilizzato il framework Bootstrap (https://getbootstrap.com) che suddivide la pagina in 12 colonne e definisce numerose classi CSS per personalizzare il layout</li>
+<li><strong>CSS Float Layout</strong>, che utilizza proprietà CSS <em>float</em> (che vediamo di seguito)</li>
+<li>CSS Grid, che utilizza la proprietà CSS <code>display</code> con valore <code>grid</code> o <code>inline-grid</code> ed è adattta a definire layout con elementi disposti per righe e colonne</li>
+<li>CSS Flexbox, che utilizza la proprietà CSS <code>display</code> con valore <code>flex</code> ed è adattta a definire layout con elementi disposti su una riga oppure su una colonna</li>
+</ul>
+<h2 is-upgraded>CSS Float Layout</h2>
+<p>Per realizzare il layout web di una pagina spesso si utilizza la proprietà CSS <strong>float</strong>.</p>
+<p>La proprietà CSS float specifica come un elemento dovrebbe <em>galleggiare</em>. La proprietà CSS <code>clear</code> specifica quali elementi possono galleggiare accanto all&#39;elemento <em>cleared</em> e su quale lato.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 7.1" duration="0">
+        <h2 is-upgraded>HTML5: Course page 1</h2>
+<p>Elementi HTML da applicare (oltre a quelli già visti in esercizi precedenti:</p>
+<p>header, section, nav, article, footer</p>
+<p>Utilizza il CSS Float Layout per per creare la pagina HTML come quella riportata di seguito con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/course_page1
+  ├── course_page1.html
+  ├── /css
+  │     ├── styles.css
+</code></pre>
+<p class="image-container"><img alt="course_page1" src="img/cf0fb24d1c4aacf4.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Responsiveness (Reattività)" duration="0">
+        <p>Il web design responsive consiste nel creare pagine web che abbiano un aspetto gradevole su tutti i dispositivi. Un web design responsive si adatterà automaticamente a diverse dimensioni dello schermo e viewport.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 7.2" duration="0">
+        <h2 is-upgraded>HTML5: Course page 2</h2>
+<p>Elementi HTML da applicare (oltre a quelli già visti in esercizi precedenti:</p>
+<p>header, section, nav, article, footer</p>
+<p>Utilizza il CSS Float Layout per per creare la pagina HTML come quella riportata di seguito con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/course_page2
+  ├── course_page2.html
+  ├── /css
+  │     ├── styles.css
+</code></pre>
+<p class="image-container"><img alt="course_page2a" src="img/9e3cec477be41bb8.png"></p>
+<p class="image-container"><img alt="course_page2b" src="img/7aa8b8c175fe502.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 7.3" duration="0">
+        <h2 is-upgraded>HTML5: Login form 1</h2>
+<p>Elementi HTML da applicare (oltre a quelli già visti in esercizi precedenti):</p>
+<p>Crea la pagina HTML come quella riportata di seguito con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/login_form1
+  ├── login_form1.html
+  ├── /css
+  │     ├── styles.css
+</code></pre>
+<p class="image-container"><img alt="login_form1" src="img/2a99824baceb272c.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 7.4" duration="0">
+        <h2 is-upgraded>HTML5: Login form 2</h2>
+<p>Elementi HTML da applicare (oltre a quelli già visti in esercizi precedenti):</p>
+<p>Crea la pagina HTML come quella riportata di seguito con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/login_form2
+  ├── login_form2.html
+  ├── /css
+  │     ├── styles.css
+</code></pre>
+<p class="image-container"><img alt="login_form2" src="img/d282ea15d118dc4b.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
