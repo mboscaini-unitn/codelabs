@@ -1,0 +1,110 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 08 del 27/03/2025 di Maurizio Boscaini</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="lab08_appunti"
+                  title="Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 08 del 27/03/2025 di Maurizio Boscaini"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Note" duration="0">
+        <p>Appunti di laboratorio - <a href="https://mboscaini-unitn.github.io/codelabs" target="_blank">elenco completo</a> Contatto <a href="mailto:maurizio.boscaini@unitn.it" target="_blank">maurizio.boscaini@unitn.it</a></p>
+<p>NOTA: questi appunti sono da intendersi solo come aiuto allo studio e alla preparazione all&#39;esame.</p>
+<pre><code>La programmazione è difficile...ma è anche bella, utile e importante.
+
+Si può imparare a programmare solo programmando.
+</code></pre>
+<p>Riferimenti</p>
+<ul>
+<li><a href="https://www.w3schools.com/html" target="_blank">HTML Tutorial (w3school.com)</a></li>
+<li><a href="https://www.w3schools.com/css/" target="_blank">CSS Tutorial (w3school.com)</a></li>
+<li>Documentazione del corso a.a. 2023/2024 del prof. Paolo Zancanaro <a href="https://maxzancanaro.github.io/codelabs/html_e_css" target="_blank">Introduzione ad HTML e CSS</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Strumenti" duration="0">
+        <ul>
+<li><strong>HTML Preview </strong><em>A VS Code extension to preview HTML files while editing them in VSCode</em></li>
+<li><a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_box-sizing" target="_blank">Demo of the different values of the CSS properties</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 8.1" duration="0">
+        <h2 is-upgraded>HTML5: Responsive Rovereto 1</h2>
+<p>Elementi CSS da applicare (oltre a quelli già visti in esercizi precedenti):</p>
+<p>max-width: 100%, l&#39;immagine verrà ridotta se necessario, ma non verrà mai ingrandita fino a raggiungere dimensioni maggiori di quelle originali</p>
+<p><strong>Text tesposive</strong> La dimensione del testo può essere impostata con un&#39;unità `vw~, che significa &#34;larghezza del viewport&#34;. In questo modo la dimensione del testo seguirà la dimensione della finestra del browser, ovvero aumenterà con l&#39;allargamento della larghezza della viewport.</p>
+<pre><code language="language-css" class="language-css">h1 {
+    font-size: 2vw;
+}
+</code></pre>
+<p>Crea la pagina HTML come quella riportata di seguito con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/responsive_rovereto1
+  ├── responsive_rovereto1.html
+  ├── /css
+  │     ├── styles.css
+  ├── /images
+  │     ├── rovereto_via_rialto.jpg
+</code></pre>
+<p>Risorse</p>
+<ul>
+<li>Testo: Rovereto su Wikipedia (https://it.wikipedia.org/wiki/Rovereto)</li>
+<li>Immagine: Via Rialto Wikipedia (https://commons.wikimedia.org/wiki/File:Viarialto.JPG)</li>
+</ul>
+<p class="image-container"><img alt="responsive_rovereto1" src="img/5cd8f12934c12e97.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 8.2" duration="0">
+        <h2 is-upgraded>HTML5: Personal Web Site 1</h2>
+<p>Crea un sito web con una tua presentazione su più pagine (attenzione alla privacy!). Un esempio di struttura è il seguente:</p>
+<pre><code>/personal_web_site1
+  ├── index.html (home page, landing page)
+  ├── contatto.html (riferimenti e form di contatto)
+  ├── image_gallery.html (galleria di immagini in miniatura del mio comune di residenza, cliccando su una miniatura si apre una nuova pagina, o tab, che visualizza l&#39;immagine nelle dimensioni originali)
+  ├── cv.html
+  ├── /css
+  │     ├── styles.css
+  ├── /images
+  │     ├── ...
+</code></pre>
+<p class="image-container"><img alt="Home" src="img/22444c7c69e94ece.png"><img alt="Curriculum" src="img/c629ea1b0ee21e3e.png"><img alt="Galery" src="img/3e843fe5c863866d.png"><img alt="Contatti" src="img/f1725edc969532fc.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

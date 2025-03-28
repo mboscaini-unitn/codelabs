@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-03-28T18:43:28+01:00",
+  "id": "lab08_appunti",
+  "duration": 0,
+  "title": "Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 08 del 27/03/2025 di Maurizio Boscaini",
+  "authors": "Maurizio Boscaini",
+  "summary": "Informatica ed elementi di programmazione I 2024/2025 (unitn.it)",
+  "source": "lab08_appunti.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "computerscience"
+  ],
+  "tags": [
+    "medium"
+  ],
+  "url": "lab08_appunti"
+}
