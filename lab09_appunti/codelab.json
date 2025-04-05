@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-04-05T21:50:24+02:00",
+  "id": "lab09_appunti",
+  "duration": 0,
+  "title": "Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 09 del 03/04/2025 di Maurizio Boscaini",
+  "authors": "Maurizio Boscaini",
+  "summary": "Informatica ed elementi di programmazione I 2024/2025 (unitn.it)",
+  "source": "lab09_appunti.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "computerscience"
+  ],
+  "tags": [
+    "medium"
+  ],
+  "url": "lab09_appunti"
+}

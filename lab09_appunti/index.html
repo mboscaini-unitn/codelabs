@@ -1,0 +1,308 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 09 del 03/04/2025 di Maurizio Boscaini</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="lab09_appunti"
+                  title="Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 09 del 03/04/2025 di Maurizio Boscaini"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Note" duration="0">
+        <p>Appunti di laboratorio - <a href="https://mboscaini-unitn.github.io/codelabs" target="_blank">elenco completo</a> Contatto <a href="mailto:maurizio.boscaini@unitn.it" target="_blank">maurizio.boscaini@unitn.it</a></p>
+<p>NOTA: questi appunti sono da intendersi solo come aiuto allo studio e alla preparazione all&#39;esame.</p>
+<pre><code>La programmazione è difficile...ma è anche bella, utile e importante.
+
+Si può imparare a programmare solo programmando.
+</code></pre>
+<p>Riferimenti</p>
+<ul>
+<li><a href="https://www.w3schools.com/html" target="_blank">HTML Tutorial (w3school.com)</a></li>
+<li><a href="https://www.w3schools.com/css/" target="_blank">CSS Tutorial (w3school.com)</a></li>
+<li><a href="https://www.w3schools.com/bootstrap5/index.php" target="_blank">Bootstrap 5 Tutorial (w3school.com)</a></li>
+<li>Documentazione del corso a.a. 2023/2024 del prof. Paolo Zancanaro <a href="https://maxzancanaro.github.io/codelabs/html_e_css" target="_blank">Introduzione ad HTML e CSS</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Controllo o componente grafico" duration="0">
+        <p>Un <strong>controllo o componente grafico</strong> è un elemento dell&#39;interfaccia utente (UI) di un&#39;applicazione che permette agli utenti di interagire con il software.</p>
+<p>Esempi di controlli grafici comuni:</p>
+<ul>
+<li>Bottoni/pulsanti (<strong>Button</strong>) – Per eseguire azioni quando vengono cliccati.</li>
+<li>Caselle di testo (<strong>TextBox/Input field</strong>) – Per inserire dati.</li>
+<li>Menu a tendina (<strong>Dropdown/Menu</strong>) – Per selezionare un&#39;opzione da un elenco.</li>
+<li>Caselle di controllo (<strong>Checkbox</strong>) – Per selezionare o deselezionare un&#39;opzione (normalmente hanno una forma quadrata).</li>
+<li><strong>Radio button</strong> – Per scegliere un&#39;opzione tra più alternative (normalmente hanno una forma circolare).</li>
+<li><strong>Slider</strong> e <strong>progress bar</strong> – Per selezionare valori o mostrare avanzamenti.</li>
+<li>Finestre di dialogo (<strong>Dialog Box/Modal</strong>) – Per conferme o avvisi.</li>
+</ul>
+<p>Le finestre <em>secondarie</em> possono essere di due tipi:</p>
+<ol type="1">
+<li><strong>modali</strong> che richiedono obbligatoriamente all&#39;utente di inserire/selezionare alcuni dati, ovvero prima di poter proseguire è necessario chiudere la finestra (normalmente è anche possibile non selezionare nulla e tornare alla finestra princiaple)</li>
+<li><strong>non modali</strong> che consentono di continuare a operare con la finestra principale dell&#39;applicazione senza dover chiudere la finestra secondaria.</li>
+</ol>
+<p>In pratica, i controlli grafici sono i mattoni fondamentali per creare interfacce interattive in applicazioni desktop, web o mobile di tipo GUI (<em>+Graphical User Interface</em>).</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 9.1" duration="0">
+        <h2 is-upgraded>HTML5: Contact form 1</h2>
+<p>Elementi HTML da applicare (oltre a quelli già visti in esercizi precedenti):</p>
+<pre><code language="language-html" class="language-html">&lt;input&gt;
+</code></pre>
+<pre><code language="language-html" class="language-html">&lt;div class=&#34;input-box&#34;&gt;
+    &lt;span class=&#34;prefix&#34;&gt;+39&lt;/span&gt;
+    &lt;input type=&#34;phone number&#34; placeholder=&#34;Numero di telefono&#34; /&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Crea la pagina HTML come quella riportata di seguito con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/contact_form1
+  ├── contact_form1.html
+  ├── /css
+  │     ├── styles.css
+</code></pre>
+<p class="image-container"><img alt="contact_form1" src="img/29f8a09b06ff7018.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 9.2" duration="0">
+        <h2 is-upgraded>HTML5: Contact form 2</h2>
+<p>Elementi HTML da applicare (oltre a quelli già visti in esercizi precedenti):</p>
+<pre><code language="language-html" class="language-html">&lt;form&gt; &lt;label&gt; &lt;textarea&gt; &lt;button&gt;
+</code></pre>
+<pre><code language="language-html" class="language-html">&lt;form action=&#34;/contact&#34; method=&#34;GET&#34;&gt;
+    &lt;label for=&#34;name&#34;&gt;Nome:&lt;/label&gt;
+    &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; required /&gt;
+    &lt;br /&gt;
+    &lt;label for=&#34;email&#34;&gt;Email:&lt;/label&gt;
+    &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; required /&gt;
+    &lt;br /&gt;
+    &lt;label for=&#34;message&#34;&gt;Messaggio:&lt;/label&gt;
+    &lt;textarea id=&#34;message&#34; name=&#34;message&#34; rows=&#34;4&#34; required&gt;&lt;/textarea&gt;
+    &lt;br /&gt;
+    &lt;button type=&#34;submit&#34;&gt;Invia&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<p>Crea la pagina HTML come quella riportata di seguito con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/contact_form2
+  ├── contact_form2.html
+  ├── /css
+  │     ├── styles.css
+</code></pre>
+<p class="image-container"><img alt="contact_form2" src="img/1b47ff795ec65b4c.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 9.3" duration="0">
+        <h2 is-upgraded>HTML5: Registration form 1</h2>
+<p>Elementi HTML da applicare (oltre a quelli già visti in esercizi precedenti):</p>
+<pre><code language="language-html" class="language-html">&lt;select&gt;
+</code></pre>
+<pre><code language="language-html" class="language-html">&lt;label for=&#34;city&#34;&gt;City:&lt;/label&gt;
+&lt;select id=&#34;city&#34; name=&#34;city&#34; required&gt;
+    &lt;option value=&#34;&#34;&gt;Seleziona una città&lt;/option&gt;
+    ...
+    &lt;option value=&#34;Trento&#34;&gt;Trento&lt;/option&gt;
+&lt;/select&gt;
+
+</code></pre>
+<p>Crea la pagina HTML come quella riportata di seguito con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/registration_form1
+  ├── registration_form1.html
+  ├── /css
+  │     ├── styles.css
+</code></pre>
+<p class="image-container"><img alt="registration_form1" src="img/2d2b1175f4c5f6be.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 9.4" duration="0">
+        <h2 is-upgraded>HTML5: Registration form 2</h2>
+<p>Modifica lo stile CSS della pagina HTML dell&#39;esercizio 9.3 migliorandone estetica e accessiblità.</p>
+<p>La struttura del file system è la seguente:</p>
+<pre><code>/registration_form2
+  ├── registration_form2.html
+  ├── /css
+  │     ├── styles.css
+</code></pre>
+<p class="image-container"><img alt="registration_form2" src="img/906a2188158fe32a.png"></p>
+<h2 is-upgraded>Stili utilizzati</h2>
+<ul>
+<li>Stili di base: <ul>
+<li>Definisce la famiglia di caratteri, il margine del corpo, il colore di sfondo e del testo.</li>
+<li>Centra il titolo e aggiunge margini ai paragrafi.</li>
+</ul>
+</li>
+<li>Stili del form: <ul>
+<li>Imposta una larghezza massima per il form e lo centra nella pagina.</li>
+<li>Aggiunge uno sfondo bianco, un padding e un bordo arrotondato.</li>
+<li>Aggiunge un&#39;ombra leggera per dare profondità.</li>
+</ul>
+</li>
+<li>Stili dei fieldset e legend: <ul>
+<li>Definisce bordi e padding per i fieldset.</li>
+<li>Stilizza le legend con un colore di sfondo, bordi e font in grassetto.</li>
+</ul>
+</li>
+<li>Stili delle label, input, select e textarea: <ul>
+<li>Definisce la visualizzazione a blocco per le label.</li>
+<li>Imposta la larghezza, il padding, i bordi e i bordi arrotondati per i campi di input, select e textarea.</li>
+<li>Utilizza box-sizing: border-box; per assicurarsi che padding e bordi siano inclusi nella larghezza totale.</li>
+</ul>
+</li>
+<li>Stili dei pulsanti: <ul>
+<li>Stilizza i pulsanti di invio e cancellazione con un colore di sfondo, colore del testo, padding, bordi arrotondati e cursor pointer.</li>
+<li>Aggiunge un effetto hover per cambiare il colore di sfondo al passaggio del mouse.</li>
+</ul>
+</li>
+<li>Stili aggiuntivi: <ul>
+<li>Permette il ridimensionamento verticale delle textarea.</li>
+<li>Allinea le label e gli input radio/checkbox in linea.</li>
+<li>Aggiunge spazio tra le label dei radio button e checkbox.</li>
+</ul>
+</li>
+<li>Stili specifici per i radio button e checkbox: <ul>
+<li>Allinea le label e gli input radio/checkbox in linea.</li>
+<li>Aggiunge spazio tra le label dei radio button e checkbox.</li>
+</ul>
+</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Introduzione a Boostrap" duration="0">
+        <p>Il framework Bootstrap (https://getbootstrap.com) è un toolkit frontend popolare, estensibile e ricco di funzionalità, utilizzando componenti e sistemi di griglia predefiniti.</p>
+<p>Inclusione del file di stile CSS di Bootstrap.</p>
+<pre><code language="language-xml" class="language-xml">&lt;link rel=&#34;stylesheet&#34; href=&#34;https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css&#34; /&gt;`
+</code></pre>
+<p>Eventuale inclusione dei file JavaScript di Boostrap per abilitare un <em>comportamento</em> lato front end.</p>
+<pre><code language="language-xml" class="language-xml">&lt;script src=&#34;https://code.jquery.com/jquery-3.5.1.slim.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js&#34;&gt;&lt;/script&gt;
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 9.5" duration="0">
+        <h2 is-upgraded>HTML5: Simple Bootstrap 1</h2>
+<p>class=&#34;container&#34; class=&#34;container-fluid&#34;</p>
+<p>Struttura del file system:</p>
+<pre><code>/simple_bootstrap1
+  ├── simple_bootstrap1.html
+</code></pre>
+<p class="image-container"><img alt="simple_bootstrap1" src="img/812e96e8b7130297.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 9.6" duration="0">
+        <h2 is-upgraded>HTML5: Simple Bootstrap Layout 1</h2>
+<p>class=&#34;row&#34; class=&#34;col&#34;</p>
+<p>Colori di background di Bootstrap https://getbootstrap.com/docs/5.0/utilities/background/</p>
+<p>Struttura del file system:</p>
+<pre><code>/simple_bootstrap_layout1
+  ├── simple_bootstrap_layout1.html
+</code></pre>
+<p class="image-container"><img alt="simple_bootstrap_layout1" src="img/59e5e277d2a25710.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 9.7" duration="0">
+        <h2 is-upgraded>HTML5: Simple Bootstrap 2</h2>
+<p>Obiettivo: Creare una pagina web con un titolo, un paragrafo e un pulsante, utilizzando le classi di Bootstrap per lo stile e il layout.</p>
+<p>Passaggi:</p>
+<ul>
+<li>Crea un file HTML: Crea un file chiamato index.html.</li>
+<li>Includi Bootstrap, aggiungendo il codice all&#39;interno del tag <code><head></code> del tuo file HTML per includere il CSS di Bootstrap tramite CDN:</li>
+<li>Aggiungi il contenuto: Aggiungi il seguente codice all&#39;interno del tag <code><body></code> del tuo file HTML:</li>
+<li>Nelle ultime righe di codice includi le librerie JavaScript necessarie per alcuni componenti di Bootstrap (come i modali o i dropdown). Anche se in questo esercizio non sono necessari, è buona pratica includerli sempre.</li>
+</ul>
+<p>Elementi Boostrap</p>
+<ul>
+<li><code><div class="container mt-5"></code>: Crea un contenitore che centra il contenuto e aggiunge un margine superiore.</li>
+<li><code><div class="jumbotron"></code>: Crea un <em>jumbotron</em>, un componente di Bootstrap per evidenziare il contenuto.</li>
+<li><code><h1 class="display-4"></code>: Applica uno stile di titolo grande.</li>
+<li><code><p class="lead"></code>: Applica uno stile di paragrafo leggermente più grande.</li>
+<li><code><a class="btn btn-primary btn-lg" ...></code>: Crea un pulsante grande con stile primario.</li>
+</ul>
+<p>Struttura del file system:</p>
+<pre><code>/simple_bootstrap2
+  ├── simple_bootstrap2.html
+  ├── /css
+  │     ├── styles.css
+</code></pre>
+<p class="image-container"><img alt="simple_bootstrap1" src="img/edba5c08d9a65544.png"></p>
+<p>Colori di background di Bootstrap https://getbootstrap.com/docs/5.0/utilities/background/</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 9.8" duration="0">
+        <h2 is-upgraded>HTML5: Simple Bootstrap Image 1</h2>
+<p>Impostazione di un&#39;immagine responsive che si ridimensiona con la pagina.</p>
+<p>class=&#34;img-fluid&#34;</p>
+<p>Struttura del file system:</p>
+<pre><code>/simple_bootstrap_image1
+  ├── simple_bootstrap_image1a.html
+  ├── /css
+  │     ├── styles.css
+  ├── /images
+  │     ├── Wikipedia-logo-v2.svg.png
+</code></pre>
+<p class="image-container"><img alt="simple_bootstrap_image1a" src="img/824a81f12eca3ae0.png"></p>
+<p class="image-container"><img alt="simple_bootstrap_image1b" src="img/99d6870c3037c9bc.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 9.9" duration="0">
+        <h2 is-upgraded>HTML5: Simple Bootstrap Layout 1</h2>
+<p>Mette a confronto le classi <code>container</code> e <code>container-fluid</code> e crea elementi che si espandono su 4 colonne che si adattano in generale a tutti i dispositivi (md = medium)</p>
+<p>class=&#34;col-md-4&#34;</p>
+<p>Struttura del file system:</p>
+<pre><code>/simple_bootstrap_layout1
+  ├── simple_bootstrap_layout1.html
+</code></pre>
+<p class="image-container"><img alt="simple_bootstrap_layout1" src="img/59e5e277d2a25710.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
