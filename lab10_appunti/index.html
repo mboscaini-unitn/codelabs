@@ -1,0 +1,226 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 10 del 10/04/2025 di Maurizio Boscaini</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="lab10_appunti"
+                  title="Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 10 del 10/04/2025 di Maurizio Boscaini"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Note" duration="0">
+        <p>Appunti di laboratorio - <a href="https://mboscaini-unitn.github.io/codelabs" target="_blank">elenco completo</a> Contatto <a href="mailto:maurizio.boscaini@unitn.it" target="_blank">maurizio.boscaini@unitn.it</a></p>
+<p>NOTA: questi appunti sono da intendersi solo come aiuto allo studio e alla preparazione all&#39;esame.</p>
+<pre><code>La programmazione è difficile...ma è anche bella, utile e importante.
+
+Si può imparare a programmare solo programmando.
+</code></pre>
+<p>Riferimenti</p>
+<ul>
+<li><a href="https://www.w3schools.com/html" target="_blank">HTML Tutorial (w3school.com)</a></li>
+<li><a href="https://www.w3schools.com/css/" target="_blank">CSS Tutorial (w3school.com)</a></li>
+<li><a href="https://www.w3schools.com/bootstrap5/index.php" target="_blank">Bootstrap 5 Tutorial (w3school.com)</a></li>
+<li>Documentazione del corso a.a. 2023/2024 del prof. Paolo Zancanaro <a href="https://maxzancanaro.github.io/codelabs/html_e_css" target="_blank">Introduzione ad HTML e CSS</a></li>
+<li>First Steps del prof. Andrea Bizzego (https://docs.google.com/presentation/d/1W-_KFJ6tvzobTMw2oo7trDBBNgV-vrqBhWq6EQOzIS0)</li>
+<li>Imparare a programmare con JavaScript, Apogeo, Boscaini Maurizio e Masetti Massimiliano (https://www.apogeonline.com/libri/imparare-a-programmare-con-javascript-maurizio-boscaini-massimiliano-masetti/) <ul>
+<li>Si può scaricare il file .zip con il codice degli esempi gratuitamente, previa registrazione.</li>
+</ul>
+</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Boostrap" duration="0">
+        <h2 is-upgraded>Caratteristiche</h2>
+<ul>
+<li><strong>Consistenza</strong> fornisce un aspetto e un design coerenti e uniformi con un design professionale e visivamente accattivante.</li>
+<li><strong>Responsiveness</strong> (reattività) le pagine appaiono e funzionno bene su qualsiasi dispositivo, inclusi desktop, laptop, tablet e smartphone. Bootstrap è &#34;mobile-first&#34;, il che significa che il design per i dispositivi mobili più piccoli viene preso in considerazione prima di quello per i dispositivi con schermo più grande. <strong>La reattività si basa sulla larghezza dello schermo, non sull&#39;altezza</strong>.</li>
+<li><strong>Compatibilità</strong> Bootstrap è costituito da una base di codice matura e testata che si basa interamente su standard e conformità/compatibilità multi-browser.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Elementi base di un linguaggio" duration="0">
+        <p>Possiamo fornire le seguenti definizioni <em>operative</em>:</p>
+<p><strong>Linguaggio</strong> = (Vocabolario, Sintassi, Semantica)</p>
+<p><strong>Vocabolario</strong> = {insieme delle parole valide/riconosciute del linguaggio}</p>
+<p><strong>Parola</strong> = sequenza finita di caratteri dell&#39;alfabeto del linguaggio</p>
+<p><strong>Alfabeto</strong> = {isieme dei simboli utilizzati dal linguaggio}</p>
+<p>Es. la parola &#34;aaaaabaaaa&#34; è una di simboli della lingua italiana ma non è una parola valida, ovvero non è riconosciuta dal linguaggio e non appartiene al vocabolario dell&#39;italiano</p>
+<p><strong>Sintassi</strong> = {insieme di regole di costruzione delle frasi}</p>
+<p><strong>Semantica</strong>: attribuisce un significato/senso/valore alle parole e alle frasi.</p>
+<p>Per es. la frase &#34;Il cane scalcia la luna&#34; è sintatticamente corretta, ma semanticamente non ha molto senso.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Introduzione al DOM" duration="0">
+        <p>Il <strong>DOM (Document Object Model)</strong> è una rappresentazione strutturata di un documento HTML (o XML), che il browser crea automaticamente quando carica la pagina. È organizzato in una <strong>gerarchia ad albero</strong> dove ogni nodo rappresenta una parte del documento (elemento, attributo, testo, ecc.).</p>
+<h2 is-upgraded>Caratteristiche principali del DOM:</h2>
+<ul>
+<li><strong>Gerarchico</strong>: ogni elemento può avere un nodo padre, figli e fratelli.</li>
+<li><strong>Oggetti</strong>: gli elementi HTML vengono rappresentati come oggetti che possono essere manipolati con linguaggi come <strong>JavaScript</strong>.</li>
+<li><strong>Accessibile</strong>: puoi accedere e modificare qualsiasi parte della pagina con <code>document.getElementById()</code>, <code>querySelector()</code>, ecc.</li>
+<li><strong>Dinamico</strong>: il DOM può essere aggiornato in tempo reale per modificare contenuti, stili, attributi e altro.</li>
+</ul>
+<h2 is-upgraded>Esempio semplificato:</h2>
+<p>Per questo HTML:</p>
+<pre><code language="language-html" class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Pagina esempio&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Ciao!&lt;/h1&gt;
+    &lt;p&gt;Questo è un paragrafo.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Il DOM corrispondente sarà:</p>
+<pre><code>- document
+  └── html
+      ├── head
+      │   └── title
+      │         └── &#34;Pagina esempio&#34;
+      └── body
+          ├── h1
+          │   └── &#34;Ciao!&#34;
+          │
+          └── p
+              └── &#34;Questo è un paragrafo.&#34;
+</code></pre>
+<p>Ogni nodo può essere manipolato, ad esempio per cambiare il testo dell&#39;elemento <code><h1></code> via JavaScript:</p>
+<pre><code language="language-javascript" class="language-javascript">document.querySelector(&#34;h1&#34;).textContent = &#34;Benvenuto!&#34;;
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Programmazione a eventi, JavaScript e pagine web" duration="0">
+        <p>La programmazione di una pagina web tramite JavaScript di base sulla scrittura di codice (funzioni) che vengono richiamate (eseguite) quando accadono determinati eventi (per esempio il clic su un elemento della pagina, oppure lo scadere di un timer)</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 10.1" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript:</h2>
+<p>Pagina web in cui cliccando su un elemento viene aggiornato un contatore utilizzando un incremento unitario.</p>
+<p>Elementi HTML da applicare (oltre a quelli già visti in esercizi precedenti):</p>
+<pre><code language="language-html" class="language-html">&lt;script&gt;
+</code></pre>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/MyCounter1
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="MyCounter1" src="img/954eb0faa5ad5c70.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 10.2" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript:</h2>
+<p>Modifica l&#39;esercizio precedente, aggiungendo la possibilità di resettare il contatore.</p>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/MyCounter2
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="MyCounter2" src="img/1f616e05ca463e9e.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 10.3" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript:</h2>
+<p>Per includere un file JavaScript esterno si usa il seguente tag:</p>
+<pre><code language="language-html" class="language-html">&lt;script src=&#34;index.js&#34;&gt;&lt;/script&gt;
+</code></pre>
+<p>Crea un programma per la conversione da gradi Celsius a Fahrenheit e viceversa.</p>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/ConversioneTemperature1
+  ├── styles.css
+  ├── index.html
+  ├── index.js
+</code></pre>
+<p class="image-container"><img alt="ConversioneTemperature1" src="img/6c2275f3434159b1.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 10.4" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript:</h2>
+<p>Crea un programma per calcolare la media di due numeri inseriti dall&#39;utente.</p>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/Media1
+  ├── styles.css
+  ├── index.html
+  ├── index.js
+</code></pre>
+<p class="image-container"><img alt="Media1" src="img/249c3ae0bbe6c83f.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 10.5" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript:</h2>
+<p>Crea un programma per dare un responso, testuale e grafico, di un valore di temperatura di un essere umano.</p>
+<p>Funzioni/metodi da applicare:</p>
+<pre><code language="language-js" class="language-js">document.querySelector(&lt;selettore CSS&gt;).setAttribute(&lt;nome attributo&gt;, &lt;valore attributo&gt;);
+</code></pre>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/TemperaturaSalute1
+  ├── styles.css
+  ├── index.html
+  ├── index.js
+</code></pre>
+<p class="image-container"><img alt="TemperaturaSalute1a" src="img/fa0ed51dfe427241.png"><img alt="TemperaturaSalute1b" src="img/6e42f4be92925063.png"><img alt="TemperaturaSalute1c" src="img/48cb6cac8479e185.png"><img alt="TemperaturaSalute1d" src="img/3f570a4660e62e69.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 10.6" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript:</h2>
+<p>Crea un programma per il calcolo dell&#39;interesse composto (https://it.wikipedia.org/wiki/Interesse_(matematica_finanziaria)).</p>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura e i seguenti file nel file system:</p>
+<pre><code>/InteresseComposto1
+  ├── css/
+      └── styles.css
+  ├── js/
+      └── index.js
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="InteresseComposto1" src="img/38695a62eebc3a34.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

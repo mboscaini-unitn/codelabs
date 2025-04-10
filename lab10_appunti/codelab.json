@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-04-10T16:31:25+02:00",
+  "id": "lab10_appunti",
+  "duration": 0,
+  "title": "Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 10 del 10/04/2025 di Maurizio Boscaini",
+  "authors": "Maurizio Boscaini",
+  "summary": "Informatica ed elementi di programmazione I 2024/2025 (unitn.it)",
+  "source": "lab10_appunti.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "computerscience"
+  ],
+  "tags": [
+    "medium"
+  ],
+  "url": "lab10_appunti"
+}
