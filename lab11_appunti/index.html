@@ -1,0 +1,338 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 11 del 17/04/2025 di Maurizio Boscaini</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="lab11_appunti"
+                  title="Informatica ed elementi di programmazione I 2024/2025 (unitn.it) :: Lezione 11 del 17/04/2025 di Maurizio Boscaini"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Note" duration="0">
+        <p>Appunti di laboratorio - <a href="https://mboscaini-unitn.github.io/codelabs" target="_blank">elenco completo</a> Contatto <a href="mailto:maurizio.boscaini@unitn.it" target="_blank">maurizio.boscaini@unitn.it</a></p>
+<p>NOTA: questi appunti sono da intendersi solo come aiuto allo studio e alla preparazione all&#39;esame.</p>
+<pre><code>La programmazione è difficile...ma è anche bella, utile e importante.
+
+Si può imparare a programmare solo programmando.
+</code></pre>
+<p>Riferimenti</p>
+<ul>
+<li><a href="https://www.w3schools.com/html" target="_blank">HTML Tutorial (w3school.com)</a></li>
+<li><a href="https://www.w3schools.com/css/" target="_blank">CSS Tutorial (w3school.com)</a></li>
+<li><a href="https://www.w3schools.com/bootstrap5/index.php" target="_blank">Bootstrap 5 Tutorial (w3school.com)</a></li>
+<li>Documentazione del corso a.a. 2023/2024 del prof. Paolo Zancanaro <a href="https://maxzancanaro.github.io/codelabs/html_e_css" target="_blank">Introduzione ad HTML e CSS</a></li>
+<li>First Steps del prof. Andrea Bizzego (https://docs.google.com/presentation/d/1W-_KFJ6tvzobTMw2oo7trDBBNgV-vrqBhWq6EQOzIS0)</li>
+<li>Imparare a programmare con JavaScript, Apogeo, Boscaini Maurizio e Masetti Massimiliano (https://www.apogeonline.com/libri/imparare-a-programmare-con-javascript-maurizio-boscaini-massimiliano-masetti/) <ul>
+<li>Si può scaricare il file .zip con il codice degli esempi gratuitamente, previa registrazione.</li>
+</ul>
+</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Teorema di Boehm-Jacopini" duration="0">
+        <p>Nel 1966 i due informatici italiani Corrado Boehm e Giuseppe Jacopini hanno dimostrato il seguente teorema:</p>
+<p>Qualunque algoritmo può essere implementato (realizzato) utilizzando le sole strutture di controllo: <strong>sequenza</strong>, <strong>selezione</strong>, <strong>iterazione</strong>.</p>
+<p>Una <strong>struttura di controllo</strong> controlla il flusso esecutivo di un programma, ovvero stabilisce qual è la prossima istruzione da eseguire.</p>
+<p>La <strong>selezione </strong><em>banalmente</em> stabilisce la successiva istruzione è quella a destra dell&#39;istruzione appena eseguita, se presente, oppure quella sottostante.</p>
+<p>La <strong>selezione</strong> (o biforcazione, o condizione, o confronto, o scelta) consente di scegliere quale istruzione/i eseguire in base al valore di verità (o booleano) di una condizione.</p>
+<p>L&#39;<strong>iterazione</strong> (o ripetizione, o ciclo, o <em>loop</em>) ripete un numero di istruzioni un determinato numero di volte (<code>for</code>) oppure fin tanto che (<code>while</code>) una condizione è vera.</p>
+<p>Come conseguenza del teorema, le tre strutture indicate sono dette <strong>strutture fondamentali della programmazione</strong>. Inoltre, da tale teorema ha preso avvio la <strong>programmazione strutturata</strong>. In particolare, è stato sorpassato l&#39;uso del costrutto di salto (<code>goto</code>, <code>jump</code>) che portava alla scrittura di programmi estremamente complicati da seguire nel loro flusso esecutivo (il cosiddetto <strong>spaghetti code</strong>),</p>
+<p>La <strong>chiamata di funzione</strong> è un altro costrutto che altera il normale (sequenziale) flusso esecutivo.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Programmazione a eventi" duration="0">
+        <p>La <strong>programmazione a eventi</strong> associa l&#39;esecuzione di codice (normalmente raccolto in una funzione) al verificarsi un evento. Per esempio:</p>
+<ul>
+<li>onload: quando la pagina è stata caricata nel browser</li>
+<li>onclick: quando l&#39;utente clicca su un elemento della pagina</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Estensione di VS Code: Go Live" duration="0">
+        <p>How to Enable Live Server on Visual Studio Code <a href="https://www.geeksforgeeks.org/how-to-enable-live-server-on-visual-studio-code" target="_blank">https://www.geeksforgeeks.org/how-to-enable-live-server-on-visual-studio-code</a></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 11.1" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript: Visualizzazione valore (versione 4, alert())</h2>
+<p>Pagina web in cui viene richiesto l&#39;inserimento di un valore che viene poi visualizzato in una finestra di popup.</p>
+<p>Funzioni e metodi JavaScript:</p>
+<pre><code language="language-JavaScript" class="language-JavaScript">prompt()
+alert()
+</code></pre>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura nel file system:</p>
+<pre><code>/pari_o_dispari1
+  ├── js/
+      └── index.js
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="pari_o_dispari1a" src="img/9b6ad09f0c445fea.png"><img alt="pari_o_dispari1b" src="img/3502ca40b712145a.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 11.2" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript: Visualizzazione valore (versione 2 console.log())</h2>
+<p>Pagina web in cui viene richiesto l&#39;inserimento di un valore che viene poi visualizzato nella console degli strumenti per gli sviluppatori che si attiva con <strong>F12</strong>, oppure clic destro sulla pagina e selezionando la voce <strong>Inspect</strong>.</p>
+<p>Funzioni e metodi JavaScript:</p>
+<pre><code language="language-JavaScript" class="language-JavaScript">parseInt()
+isNaN()
+console.log()
+</code></pre>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura nel file system:</p>
+<pre><code>/pari_o_dispari2
+  ├── js/
+      └── index.js
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="pari_o_dispari2a" src="img/f0c5d0beb54b00d.png"><img alt="pari_o_dispari2b" src="img/34c8c4c620112e63.png"><img alt="pari_o_dispari2b" src="img/2a99d5f570641f2c.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 11.3" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript: Visualizzazione valore (versione 3, document.write())</h2>
+<p>Pagina web in cui viene richiesto l&#39;inserimento di un valore che viene poi visualizzato nella pagina con il metodo <code>document.write()</code>. L&#39;eventuale contenuto della pagina viene sovrascritto. È un metodo <em>deprecated</em>, poichè si preferisce modificare il DOM della pagina come nel successivo Esercizio 11.4.</p>
+<p>Funzioni e metodi JavaScript:</p>
+<pre><code language="language-JavaScript" class="language-JavaScript">document.write()
+</code></pre>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura nel file system:</p>
+<pre><code>/pari_o_dispari3
+  ├── js/
+      └── index.js
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="pari_o_dispari3a" src="img/1a87bd552359a100.png"><img alt="pari_o_dispari3b" src="img/1b803301c0f8cd9c.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 11.4" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript: Visualizzazione valore (versione 4, DOM)</h2>
+<p>Pagina web in cui viene richiesto l&#39;inserimento di un valore che viene poi visualizzato nella pagina, modificando il DOM.</p>
+<p>Funzioni e metodi JavaScript:</p>
+<pre><code language="language-JavaScript" class="language-JavaScript">document.getElementById()
+document.innerHTML()
+onclick()
+</code></pre>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura nel file system:</p>
+<pre><code>/pari_o_dispari4
+  ├── js/
+      └── index.js
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="pari_o_dispari4a" src="img/9a8520aca64f4a16.png"><img alt="pari_o_dispari4b" src="img/e6f45c272bb4c980.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 11.5" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript: Conteggio con il ciclo while</h2>
+<p>Pagina web in cui vengono scritti i numeri da 1 a 100 con il ciclo <strong>while</strong>, modificando il DOM.</p>
+<p>Funzioni e metodi JavaScript:</p>
+<pre><code language="language-JavaScript" class="language-JavaScript">document.getElementById()
+document.innerHTML()
+onclick
+</code></pre>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura nel file system:</p>
+<pre><code>/conteggio_while
+  ├── js/
+      └── index.js
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="conteggio_while" src="img/3cf359d4d2f02c61.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 11.6" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript: Conteggio con il ciclo for</h2>
+<p>Pagina web in cui vengono scritti i numeri da 1 a 100 con il ciclo <strong>for</strong>, modificando il DOM.</p>
+<p>Funzioni e metodi JavaScript:</p>
+<pre><code language="language-JavaScript" class="language-JavaScript">document.getElementById()
+document.innerHTML()
+onclick()
+</code></pre>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura nel file system:</p>
+<pre><code>/conteggio_for
+  ├── js/
+      └── index.js
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="conteggio_for" src="img/d574bbcf1f3331fe.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 11.7" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript: Numeri random 1</h2>
+<p>Pagina web per il calcolo di un numero random tra 1 e n, dove n è inserito dall&#39;utente.</p>
+<p>Funzioni e metodi JavaScript:</p>
+<pre><code language="language-JavaScript" class="language-JavaScript">document.getElementById()
+document.innerHTML()
+Math.floor()
+Math.random()
+onclick()
+</code></pre>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura nel file system:</p>
+<pre><code>/numeri_random1
+  ├── css/
+      └── styles.css
+  ├── js/
+      └── index.js
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="numeri_random1" src="img/c0ef4ed616c7a96a.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 11.8" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript: Numeri random 2</h2>
+<p>Pagina web per il calcolo di n numeri random tra 1 e n, dove n è inserito dall&#39;utente.</p>
+<p>Funzioni e metodi JavaScript:</p>
+<pre><code language="language-JavaScript" class="language-JavaScript">document.getElementById()
+document.innerHTML()
+Math.floor()
+Math.random()
+onclick()
+</code></pre>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura nel file system:</p>
+<pre><code>/numeri_random2
+  ├── css/
+      └── styles.css
+  ├── js/
+      └── index.js
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="numeri_random2" src="img/24954831f98d91fd.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 11.9" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript: Numeri random 3</h2>
+<p>Pagina web per il calcolo di n numeri random tra 1 e n, dove n è inserito dall&#39;utente. Inoltre, definisce la funzione JavaScript <code>isPrimo()</code> per verificare se un numero è primo e elenca quali e quanti sono i numeri primi generati.</p>
+<p>Funzioni e metodi JavaScript:</p>
+<pre><code language="language-JavaScript" class="language-JavaScript">document.getElementById()
+document.innerHTML()
+Math.floor()
+Math.random()
+onclick()
+</code></pre>
+<p>Un numero intero è primo se:</p>
+<ol type="1">
+<li>è maggiore di 1 (quindi 1 non è un numero primo)</li>
+<li>è divisibile soltanto per 1 e per se stesso</li>
+</ol>
+<pre><code language="language-javascript" class="language-javascript">/**
+ * Ritorna true se il numero è primo, false altrimenti
+ * @param {*} num
+ * @returns
+ */
+function isPrimo(num) {
+    if (num &lt; 2) return false;
+
+    for (let i = 2; i &lt; num; i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+</code></pre>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura nel file system:</p>
+<pre><code>/numeri_random3
+  ├── css/
+      └── styles.css
+  ├── js/
+      └── index.js
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="numeri_random3" src="img/6f2e0d1e96c70354.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 11.10" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript: Calcolo dell&#39;interesse composto</h2>
+<p>Pagina web per il calcolo dell&#39;interesse composto modificando il DOM. Quando viene modificato il valore degli anni, automaticamente viene ricalcolato il montante.</p>
+<p>Funzioni e metodi JavaScript:</p>
+<pre><code language="language-JavaScript" class="language-JavaScript">document.getElementById()
+document.innerHTML()
+document.querySelector()
+onclick()
+onchange()
+</code></pre>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura nel file system:</p>
+<pre><code>/interesse_composto
+  ├── css/
+      └── styles.css
+  ├── js/
+      └── index.js
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="interesse_composto" src="img/5c88447e07bd37b4.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Esercizio 11.11" duration="0">
+        <h2 is-upgraded>HTML5/JavaScript: Tabelline</h2>
+<p>Pagina web per il calcolo dell&#39;interesse composto modificando il DOM. Quando viene modificato il valore degli anni, automaticamente viene ricalcolato il montante.</p>
+<p>Funzioni e metodi JavaScript:</p>
+<pre><code language="language-JavaScript" class="language-JavaScript">document.getElementById()
+document.innerHTML()
+document.querySelector()
+onclick()
+onchange()
+</code></pre>
+<p>Crea la pagina HTML e il codice JavaScript con la seguente struttura nel file system:</p>
+<pre><code>/tabelline
+  ├── css/
+      └── styles.css
+  ├── js/
+      └── index.js
+  ├── index.html
+</code></pre>
+<p class="image-container"><img alt="tabelline" src="img/1482007d3825e710.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
